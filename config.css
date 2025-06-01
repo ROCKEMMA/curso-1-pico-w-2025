@@ -1,0 +1,15 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Roboto Mono", monospace;
+}
+
+body {
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+}
