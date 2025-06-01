@@ -24,7 +24,7 @@ export function seccionSemaforo() {
     datosFireBase();
 
     // Actualización en tiempo real
-    setInterval(datosFireBase,1000)
+    setInterval(datosFireBase,500)
 
     section.appendChild(semaforo);
     return section;
