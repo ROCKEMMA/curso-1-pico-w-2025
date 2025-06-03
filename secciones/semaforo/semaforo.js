@@ -1,6 +1,9 @@
 import { luz } from "../../componente/luz/luzComponente.js";
 
 function seccionSemaforo() {
+
+    
+
     let section = document.createElement('section');
     section.className = "sectio-semaforo"
 

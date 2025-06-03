@@ -2,13 +2,10 @@
     display: flex;
     justify-content: center;
     margin-top: 30px;
-
-    grid-row-start: 0;
-    grid-row-start: 2;
 }
 
 .semaforo {
-    width: 80%;
+    width: 90%;
     max-width: 20rem;
     height: auto;
     background-color: #fff;

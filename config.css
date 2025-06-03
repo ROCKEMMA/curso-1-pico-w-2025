@@ -10,10 +10,29 @@ html {
 
 body {
     width: 100%;
-    /* max-width: 400px; */
     margin: auto;
 
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 60px;
+}
+header {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+.sectio-semaforo {
+    grid-row-start: 0;
+    grid-row-start: 2;
+}
+@media screen and (max-width: 768px) {
+    body {
+        max-width: 400px;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 60px 1fr 1fr;
+        }
+    header {
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
 }
