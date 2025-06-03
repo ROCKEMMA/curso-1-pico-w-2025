@@ -1,11 +1,19 @@
 import { luz } from "../../componente/luz/luzComponente.js";
+import { crearBoton } from "../../componente/botone/botonComponente.js";
 
 function seccionSemaforo() {
-
-    
-
     let section = document.createElement('section');
     section.className = "sectio-semaforo"
+
+    /* Sección de botones */
+    let divBotones = document.createElement('div');
+    divBotones.className = "div-botones";
+    divBotones.appendChild(crearBoton("red","boton1"));
+    divBotones.appendChild(crearBoton("green","boton2"));
+    divBotones.appendChild(crearBoton("orange","boton3"));
+    divBotones.appendChild(crearBoton("black","boton4"));
+
+    section.appendChild(divBotones);
 
     let semaforo = document.createElement('div');
     semaforo.className = "semaforo";
