@@ -11,7 +11,7 @@ REDES = [
 
 if conectar_wifi(REDES):
     print("Conectado a WiFi - Ejecutando programa principal")
-    encender_semaforo(5)
+    encender_semaforo()
 else:
     print("Modo offline - Funcionalidades limitadas")
     

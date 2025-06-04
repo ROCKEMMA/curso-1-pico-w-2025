@@ -8,9 +8,9 @@ function seccionSemaforo() {
     /* Sección de botones */
     let divBotones = document.createElement('div');
     divBotones.className = "div-botones";
-    divBotones.appendChild(crearBoton("red","boton1"));
-    divBotones.appendChild(crearBoton("green","boton2"));
-    divBotones.appendChild(crearBoton("orange","boton3"));
+    divBotones.appendChild(crearBoton("green","boton1"));
+    divBotones.appendChild(crearBoton("orange","boton2"));
+    divBotones.appendChild(crearBoton("red","boton3"));
     divBotones.appendChild(crearBoton("black","boton4"));
 
     section.appendChild(divBotones);
@@ -26,9 +26,9 @@ function seccionSemaforo() {
             let datos = await respuesta.json();
             semaforo.innerHTML = '';
             
-            semaforo.appendChild(luz(colores[0],datos.rojo));
-            semaforo.appendChild(luz(colores[1],datos.amarillo));
             semaforo.appendChild(luz(colores[2],datos.verde));
+            semaforo.appendChild(luz(colores[1],datos.amarillo));
+            semaforo.appendChild(luz(colores[0],datos.rojo));
         } catch (error) {
             console.log("Error al obtener datos de Firebase:", error);
         }
