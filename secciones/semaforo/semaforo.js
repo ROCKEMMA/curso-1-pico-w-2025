@@ -24,20 +24,21 @@ function seccionSemaforo() {
         try {
             let respuesta = await fetch('https://semaforo-706f7-default-rtdb.firebaseio.com/.json');
             let datos = await respuesta.json();
+            console.log(datos)
             semaforo.innerHTML = '';
             
-            semaforo.appendChild(luz(colores[2],datos.verde));
+            semaforo.appendChild(luz(colores[2],datos.verde)); 
             semaforo.appendChild(luz(colores[1],datos.amarillo));
             semaforo.appendChild(luz(colores[0],datos.rojo));
         } catch (error) {
-            console.log("Error al obtener datos de Firebase:", error);
+            console.log("Error al obtener datos de Firebase:", error); 
         }
     }
 
     datosFireBase();
 
     // Actualización en tiempo real
-    setInterval(datosFireBase,500)
+    setInterval(datosFireBase,100)
 
     section.appendChild(semaforo);
     return section;
